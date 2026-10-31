@@ -1,5 +1,10 @@
 VIRA WEBSITE
 
+Published: https://blindghostx.github.io/vira-support/
+Support: https://blindghostx.github.io/vira-support/Support.html
+Privacy: https://blindghostx.github.io/vira-support/PrivacyPolicy.html
+GitHub Pages HTTPS deployment verified on October 31, 2026.
+
 Static website prepared for GitHub Pages. The app remains in development; these
 files do not announce a public App Store release or an approved security product.
 
