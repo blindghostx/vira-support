@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Vira is an Apple app in development for on-device scam checks, optional Safari domain rules, and local-network awareness. Learn about its scope, privacy, and support.">
+  <title>Vira — Think before you tap</title>
+  <style>
+    :root{color-scheme:light dark;--bg:#f5f8f7;--surface:#fff;--ink:#17282e;--muted:#536661;--line:#cbd9d5;--green:#116347;--soft:#e5f0e9;--accent:#b0eb9a;--night:#112d27;--night-muted:#bbd4c7;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;color:var(--ink);background:var(--bg)}
+    *{box-sizing:border-box}body{margin:0}a{color:var(--green);text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:5px}button,input{font:inherit}.wrap{width:min(1120px,100% - 48px);margin-inline:auto}.skip{position:absolute;top:-80px;left:24px;background:var(--surface);padding:12px;z-index:2}.skip:focus{top:12px}
+    header{border-bottom:1px solid var(--line)}nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:92px}.brand{display:inline-flex;align-items:center;gap:10px;font-size:1.55rem;font-weight:750;letter-spacing:-.04em;text-decoration:none;color:var(--ink)}.brand svg{width:30px;height:34px}.nav-links{display:flex;align-items:center;flex-wrap:wrap;gap:24px}.nav-links a{font-size:.92rem;font-weight:600;text-decoration:none;color:var(--ink)}.nav-links a:hover{text-decoration:underline}
+    .hero{padding:82px 0 76px;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:64px}.eyebrow{font-size:.75rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.status{display:inline-flex;align-items:center;gap:9px;background:var(--soft);border:1px solid var(--line);padding:7px 12px;border-radius:999px;font-size:.76rem;font-weight:650}.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}h1{font-size:clamp(3.3rem,6.4vw,5.5rem);font-weight:650;line-height:1.02;letter-spacing:-.065em;margin:23px 0 24px;max-width:650px}h1 span{color:var(--green)}.lead{font-size:1.15rem;line-height:1.65;max-width:560px;color:var(--muted)}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:20px;margin-top:30px}.button{display:inline-flex;justify-content:center;align-items:center;border-radius:9px;padding:12px 20px;background:var(--green);color:var(--surface);font-weight:700;text-decoration:none}.text-link{font-size:.95rem;font-weight:650}.platforms{font-size:.8rem;letter-spacing:.02em;color:var(--muted);margin:22px 0 0}
+    .perspective{background:var(--night);color:#f1f7f1;border-radius:24px;padding:30px;box-shadow:0 18px 50px #103b2812}.perspective .eyebrow{color:var(--accent)}.perspective h2{font-size:1.8rem;line-height:1.2;letter-spacing:-.04em;margin:10px 0 24px}.step{display:grid;grid-template-columns:32px 1fr;gap:13px;padding:20px 0;border-top:1px solid #365347}.step-number{color:var(--accent);font-size:.85rem;line-height:1.6;font-weight:700}.step h3{margin:0 0 4px;font-size:1rem;font-weight:650}.step p{color:var(--night-muted);font-size:.88rem;line-height:1.6;margin:0}.small-note{color:var(--night-muted);font-size:.77rem;line-height:1.5;border-top:1px solid #365347;padding-top:20px;margin:4px 0 0}
+    .section{padding:64px 0;border-top:1px solid var(--line)}.section-title{font-size:clamp(2rem,4.3vw,3.1rem);line-height:1.12;font-weight:650;letter-spacing:-.045em;margin:12px 0 20px}.section-intro{max-width:720px;color:var(--muted);margin:0 0 30px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px}.card .number{color:var(--green);font-size:.75rem;font-weight:750;letter-spacing:.05em}.card h3{font-size:1.2rem;letter-spacing:-.02em;margin:12px 0 10px}.card p{color:var(--muted);font-size:.95rem;margin:0}.card p+p{margin-top:12px}.card .limit{font-size:.82rem}
+    .privacy{display:grid;grid-template-columns:1fr 1fr;gap:60px}.privacy .section-title{max-width:450px}.privacy ul{list-style:none;padding:0;margin:0}.privacy li{border-bottom:1px solid var(--line);padding:17px 0}.privacy li:first-child{padding-top:0}.privacy strong{display:block;font-size:.98rem}.privacy li span{display:block;font-size:.91rem;color:var(--muted);margin-top:3px}.privacy p{color:var(--muted);font-size:.94rem}.privacy .text-link{display:inline-block;margin-top:12px}
+    details{border-top:1px solid var(--line);padding:19px 0}details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:650;padding-right:12px}details p{max-width:860px;color:var(--muted);margin:12px 0 3px;font-size:.94rem}.release{border-top:1px solid var(--line);padding:38px 0;display:flex;justify-content:space-between;align-items:center;gap:26px}.release h2{font-size:1.25rem;letter-spacing:-.02em;margin:0 0 5px}.release p{color:var(--muted);font-size:.92rem;margin:0;max-width:720px}.release .button{white-space:nowrap}footer{border-top:1px solid var(--line);padding:28px 0 36px;color:var(--muted);font-size:.8rem}.footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}.footer-links{display:flex;flex-wrap:wrap;gap:20px}footer a{overflow-wrap:anywhere}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:38px;padding:50px 0}.perspective{max-width:620px}.privacy{grid-template-columns:1fr;gap:20px}.section{padding:46px 0}.release{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.wrap{width:calc(100% - 36px)}nav{min-height:82px;gap:16px}.nav-links{gap:15px}.nav-links a{font-size:.83rem}.brand{font-size:1.4rem}.brand svg{width:25px}.hero{padding-top:40px}h1{font-size:3.5rem}.lead{font-size:1.05rem}.grid{grid-template-columns:1fr}.perspective,.card{padding:24px}.section-title{font-size:2.2rem}.footer-links{gap:14px}}
+    @media(prefers-color-scheme:dark){:root{--bg:#0b171b;--surface:#112128;--ink:#e9f2ef;--muted:#b2c7bf;--line:#314844;--green:#aff080;--soft:#21382e;--night:#112d27}.button{color:#12281b}.perspective{border:1px solid #365347;box-shadow:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Vira home">
+        <svg viewBox="0 0 32 36" fill="none" aria-hidden="true"><path d="M16 2 29 7v10c0 8-8 14-13 17C11 31 3 25 3 17V7L16 2Z" stroke="currentColor" stroke-width="2.4"/><path d="m10 16 4 5 8-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Vira
+      </a>
+      <div class="nav-links"><a href="#features">Explore</a><a href="Support.html">Support</a><a href="PrivacyPolicy.html">Privacy</a></div>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="status"><span class="dot" aria-hidden="true"></span>Apple app in development</div>
+        <h1 id="hero-title">Think before<br>you <span>tap.</span></h1>
+        <p class="lead">A clearer view of suspicious messages, links, and your local network. Vira helps you pause, review warning signs, and choose your next step.</p>
+        <div class="actions"><a class="button" href="#features">Explore Vira <span aria-hidden="true">&nbsp;↗</span></a><a class="text-link" href="PrivacyPolicy.html">How your data is handled</a></div>
+        <p class="platforms">Being built for iPhone, iPad, and Mac</p>
+      </div>
+      <aside class="perspective" aria-label="Vira's approach">
+        <div class="eyebrow">A little more clarity</div>
+        <h2>Your next move<br>stays yours.</h2>
+        <div class="step"><span class="step-number" aria-hidden="true">01</span><div><h3>Bring the content</h3><p>Paste text, choose an image, or use a supported camera to read text and QR codes.</p></div></div>
+        <div class="step"><span class="step-number" aria-hidden="true">02</span><div><h3>Review what it says</h3><p>Correct reading errors and inspect warning signs. Scanned destinations never open automatically.</p></div></div>
+        <div class="step"><span class="step-number" aria-hidden="true">03</span><div><h3>Choose your next step</h3><p>Check through a trusted channel, adjust your rules, or find basic recovery guidance.</p></div></div>
+        <p class="small-note">A check can reveal warning signs. It cannot certify that something is safe or authentic.</p>
+      </aside>
+    </section>
+
+    <section id="features" class="section" aria-labelledby="features-title">
+      <div class="eyebrow">What Vira is building</div>
+      <h2 id="features-title" class="section-title">Useful checks.<br>Clear boundaries.</h2>
+      <p class="section-intro">The Apple app is in active development. These features are being implemented and tested; public App Store availability has not been announced.</p>
+      <div class="grid">
+        <article class="card"><span class="number">01 / CHECK</span><h3>Read before you react.</h3><p>Review messages and links with on-device checks. Extract text and QR codes from selected images, supported iPhone/iPad live scanning, or a Mac camera still image.</p><p class="limit">Recognition can make mistakes. No warning found means unverified, not safe. Images do not prove authenticity.</p></article>
+        <article class="card"><span class="number">02 / SAFARI</span><h3>Rules you can understand.</h3><p>Choose optional CERT Polska domain-list downloads and manage your own blocks and exceptions. Review source age and Safari’s reported extension state separately.</p><p class="limit">Applies to matching Safari requests when rules are loaded and enabled. The source focuses on threats targeting Polish users and is not complete global coverage.</p></article>
+        <article class="card"><span class="number">03 / NETWORK</span><h3>Know what’s visible.</h3><p>Discover supported services advertised on a network you are authorized to manage. See available addresses and organize observations with room labels you assign.</p><p class="limit">A partial service view, not a complete device inventory or people tracker. Room labels do not measure physical locations.</p></article>
+        <article class="card"><span class="number">04 / RECOVERY</span><h3>Find a practical next step.</h3><p>Get basic guidance after clicking, sharing a password, paying, or installing something. Official resources open only when you choose them.</p><p class="limit">Vira cannot recover funds or certify that a device is uncompromised. Urgent payment issues belong with your payment provider.</p></article>
+      </div>
+    </section>
+
+    <section class="section privacy" aria-labelledby="privacy-title">
+      <div><div class="eyebrow">Privacy by design</div><h2 id="privacy-title" class="section-title">Your checks stay<br>on your device.</h2><p>Vira’s development version has no account, cloud analysis, advertising, or analytics SDK. You choose whether to connect to the optional domain-list provider.</p><a class="text-link" href="PrivacyPolicy.html">Read the privacy policy <span aria-hidden="true">↗</span></a></div>
+      <ul>
+        <li><strong>Local analysis</strong><span>Submitted text, images, and network observations are not uploaded for analysis. Selected iCloud images may download through Apple’s picker.</span></li>
+        <li><strong>Explicit connections</strong><span>Optional source downloads reveal normal connection metadata, such as your IP address, to CERT Polska. Your submitted content and browsing URLs are not included.</span></li>
+        <li><strong>Controls that explain the difference</strong><span>Clear the current session or separately reset saved Safari rules and rollback history. Safari may need to be disabled if it cannot confirm a reset.</span></li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="questions-title">
+      <div class="eyebrow">Before you get started</div><h2 id="questions-title" class="section-title">A few things to know.</h2>
+      <details><summary>Can Vira tell me whether something is real or fake?</summary><p>Vira can recognize text and QR codes, check for supported warning patterns, and compare destinations with an optional locally cached source. It cannot conclusively authenticate a person, sender, product, document, photo, or video. Verify important requests through a trusted channel you already know.</p></details>
+      <details><summary>Does Safari protection update while the app is closed?</summary><p>Background timing is not guaranteed. After you opt in, Vira attempts source updates about every five minutes while active and when you return if due. Safari may keep its last loaded rules while Vira is closed, including entries later removed from the source. Reopen Vira to refresh, or disable its extension to stop blocking.</p></details>
+      <details><summary>Will the network map show where someone is?</summary><p>No. It shows supported advertised services and available addresses. Names may be spoofed, some devices advertise nothing, and multiple services can belong to one device. Room labels are entered by you; the app does not identify people or measure a device’s physical location.</p></details>
+      <details><summary>Where can I download Vira?</summary><p>Vira is still in development. There is no public App Store download announced here. Camera behavior, native Safari enforcement, permissions, and supported-device workflows require release testing before broader availability.</p></details>
+    </section>
+
+    <section class="release" aria-labelledby="support-title"><div><h2 id="support-title">Have a question about Vira?</h2><p>Read the support guide or contact us. Please keep passwords, verification codes, and unnecessary private content out of your message.</p></div><a class="button" href="Support.html">Vira support <span aria-hidden="true">&nbsp;↗</span></a></section>
+  </main>
+  <footer><div class="wrap footer-row"><span>Vira · Apple app in development</span><div class="footer-links"><a href="Support.html">Support</a><a href="PrivacyPolicy.html">Privacy policy</a><a href="mailto:viratechnologieLLC@gmail.com">Email Vira</a></div></div></footer>
+</body>
+</html>
